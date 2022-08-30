@@ -5,9 +5,15 @@ m = 3, n = 4.
 8 7,8 -7,1 9
 */
 Console.WriteLine("Введите m: ");
-double i = Convert.ToInt32(Console.ReadLine());
+int i = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите n: ");
-double j = Convert.ToInt32(Console.ReadLine());
+int j = Convert.ToInt32(Console.ReadLine());
+
+double[,] matrix = new double[i, j];
+FillArray(matrix);
+Console.WriteLine();
+PrintArray(matrix);
+
 void PrintArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -30,7 +36,3 @@ void FillArray(double[,] array)
         }
     }
 }
-double[,] matrix = new double[3, 4];
-FillArray(matrix);
-Console.WriteLine();
-PrintArray(matrix);
